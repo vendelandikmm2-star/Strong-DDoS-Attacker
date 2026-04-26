@@ -64,3 +64,8 @@ class DDoSAttacker:
 
 if __name__ == "__main__":
     DDoSAttacker()
+import os
+
+print("Nastavuji prostředí pro Strong-DDoS-Attacker...")
+os.system("pip3 install requests colorama pysocks")
+print("\nHotovo! Nyní můžeš skript spustit pomocí: python3 strong-ddos.py")
