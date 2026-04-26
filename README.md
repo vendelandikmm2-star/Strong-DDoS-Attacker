@@ -1,6 +1,6 @@
 How to run it
 
-Linux: 
+Linux : 
 
 git clone https://github.com/vendelandikmm2-star/Strong-DDoS-Attacker
 
