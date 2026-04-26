@@ -1,4 +1,21 @@
-import tkinter as tk
+import subprocess
+import sys
+
+# Seznam knihoven, které tvůj skript potřebuje (např. requests, colorama)
+required_libraries = ['requests', 'colorama', 'pysocks']
+
+def install_dependencies():
+    for lib in required_libraries:
+        try:
+            __import__(lib)
+        except ImportError:
+            print(f"[*] Knihovna {lib} missing. Installing...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", lib])
+
+if __name__ == "__main__":
+    install_dependencies()
+    # Tady pokračuje tvůj stávající kód skriptu...
+    print("Everything Ready , Starting Attack...")import tkinter as tk
 from tkinter import messagebox
 import requests
 import threading
@@ -64,8 +81,3 @@ class DDoSAttacker:
 
 if __name__ == "__main__":
     DDoSAttacker()
-import os
-
-print("Nastavuji prostředí pro Strong-DDoS-Attacker...")
-os.system("pip3 install requests colorama pysocks")
-print("\nHotovo! Nyní můžeš skript spustit pomocí: python3 strong-ddos.py")
